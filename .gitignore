@@ -1,1 +1,7 @@
 .DS_Store
+/public
+
+## wercker output
+/_builds
+/_projects
+/_steps
