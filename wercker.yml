@@ -11,14 +11,9 @@ build:
 
 deploy:
   steps:
-    - wercker/install-packages:
-      packages: wget
-    - xchapter7x/cf-push:
-      cloudfoundry_user_name: $CF_USER
-      cloudfoundry_user_pass: $CF_PASSWORD
-      cloudfoundry_org: soundathletics
-      cloudfoundry_space: production
-      cloudfoundry_api_url: https://api.run.pivotal.io
-      cloudfoundry_app_name: website
-      cloudfoundry_use_manifest: true
-      cloudfoundry_domain: soundathletics.org
+    - install-packages:
+        packages: git ssh-client
+    - lukevivier/gh-pages@0.2.1:
+        token: $GIT_TOKEN
+        domain: soundathletics.org
+        basedir: public
