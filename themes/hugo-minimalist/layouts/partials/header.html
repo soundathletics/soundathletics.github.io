@@ -46,7 +46,8 @@
                 {{ range $item := .Site.Params.mainMenu }}
                     {{ $itemUrl := printf "%s/%s/" $item }}
                     {{ $itemTitle := title $item }}
-                    <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $item }}">{{ $itemTitle }}</a></li>
+                    {{ $itemHref := replace $item " " "_"}}
+                    <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
                 {{ end }}
             {{ end }}
             </ul>
