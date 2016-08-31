@@ -791,3 +791,32 @@ body.post-template .site-header h2 .logo {
 
 .clearfix:after {
   clear: both; }
+
+ul.horizontal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #d13445;
+}
+
+ul.horizontal li {
+    float: left;
+}
+
+ul.horizontal li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.horizontal li a:hover:not(.active) {
+    background-color: #000;
+}
+
+ul.horizontal li a.active {
+    background-color:#4CAF50;
+}
+
