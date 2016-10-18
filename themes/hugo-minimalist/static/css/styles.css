@@ -492,9 +492,8 @@ hr {
   margin: 20px 5% 0px 5%; }
 
 .content {
-  width: 60%;
-  margin-right: 5%;
-  float: right; }
+  width: 80%;
+  margin-left: 5% }
 
 .site-header {
   background: #2a373d url(../img/header-bg.jpg) no-repeat center center;
