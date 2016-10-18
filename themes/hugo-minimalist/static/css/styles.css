@@ -820,3 +820,11 @@ ul.horizontal li a.active {
     background-color:#4CAF50;
 }
 
+.watermark {
+  background-image: url(./../img/logo.png);
+  background-repeat: no-repeat;
+  color: black;
+  opacity:.5;
+  background-position: center center;
+  position: absolute;
+}
