@@ -5,8 +5,8 @@ title = "Donations" #_
 
 +++
 
-##Please send all donations to 
+## Please send all donations to 
 
-##Sound Athletics
-##3801 N. 27th Street #6921
-##Tacoma, WA  98407-9998
+## Sound Athletics
+## 3801 N. 27th Street #6921
+## Tacoma, WA  98407-9998
