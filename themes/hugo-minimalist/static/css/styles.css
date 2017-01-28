@@ -493,6 +493,10 @@ hr {
 
 .content {
   width: 80%;
+  background-image: url(/img/sabackground.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 310px 310px;
   margin-left: 5% }
 
 .site-header {
