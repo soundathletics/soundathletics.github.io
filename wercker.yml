@@ -14,6 +14,6 @@ deploy:
     - install-packages:
         packages: git ssh-client
     - pahnev/gh-pages@0.3.1:
-        token: $GIT_TOKEN
+        token: $SA_GITHUB_ACCESS_TOKEN
         domain: soundathletics.org
         basedir: public
