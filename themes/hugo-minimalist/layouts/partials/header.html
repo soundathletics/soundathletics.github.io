@@ -41,9 +41,9 @@
         </header>
         <div id="navbar">
             <ul class="horizontal">
-            {{ if isset .Site.Params "mainMenu" }}
+            {{ if isset .Site.Params "main_menu" }}
                 {{ $url := .Permalink }}
-                {{ range $item := .Site.Params.mainMenu }}
+                {{ range $item := .Site.Params.main_menu }}
                     {{ $itemUrl := printf "%s/%s/" $item }}
                     {{ $itemTitle := title $item }}
                     {{ $itemHref := replace $item " " "_"}}
