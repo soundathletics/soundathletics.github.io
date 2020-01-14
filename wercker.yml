@@ -2,8 +2,6 @@
 box: debian
 build:
   steps:
-    # Use off the shelf hugo build step
-    # https://app.wercker.com/#applications/54a7744c6b3ba8733de4dcde/tab/details
     - arjen/hugo-build:
       version: "0.62.2"
       theme: hugo-minimalist
@@ -13,7 +11,7 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - pahnev/gh-pages@0.3.1:
+    - 7h3laughingman/gh-pages:
         token: $SA_GITHUB_ACCESS_TOKEN
         domain: soundathletics.org
-        basedir: public
+        path: public
