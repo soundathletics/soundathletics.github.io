@@ -15,3 +15,4 @@ deploy:
         token: $SA_GITHUB_ACCESS_TOKEN
         domain: soundathletics.org
         path: public
+        comment: Push website to github
