@@ -5,3 +5,5 @@
 /_builds
 /_projects
 /_steps
+
+.hugo_build.lock
