@@ -1,4 +1,4 @@
-baseurl = "https://yourdomain.com/"
+baseurl = "http://localhost:1313"
 languageCode = "en-us"
 title = "John Doe's blog"
 # Define how many pages appear per site
