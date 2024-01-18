@@ -39,6 +39,9 @@
             </div>
         </header> -->
         <div id="navbar">
+            <div id="logo-home">
+                <a href="/">HOME</a>
+            </div>
             <ul class="horizontal">
             {{ if isset .Site.Params "main_menu" }}
                 {{ $url := .Permalink }}
@@ -49,6 +52,7 @@
                     <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
                 {{ end }}
             {{ end }}
+                <li><a href="facebook.com">FB</a></li>
             </ul>
         </div>
                 
