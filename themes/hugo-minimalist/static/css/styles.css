@@ -725,7 +725,11 @@ hr {
   text-align: center;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
-  color: #a2a2a2; }
+  color: #a2a2a2; 
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 .main-footer .container {
   padding: 30px 0; }
@@ -812,6 +816,7 @@ body.post-template .site-header h2 .logo {
   justify-content: flex-start;
   align-items: center;
   background-color: #d13445;
+  padding-left: 2em;
 }
   
 #navbar ul.horizontal li a {
@@ -849,7 +854,7 @@ ul.horizontal li a {
 }
 
 ul.horizontal li a:hover:not(.active) {
-    background-color: #000;
+    background-color: #fff;
 }
 
 ul.horizontal li a.active {
@@ -864,3 +869,15 @@ ul.horizontal li a.active {
   background-position: center center;
   position: absolute;
 }
+
+#navbar ul.horizontal li a:hover,
+#navbar ul.horizontal li a:visited,
+#navbar ul.horizontal li a:focus,
+#navbar ul.horizontal li a:hover:not(.active) {
+  background-color: #a72b37;
+  border-radius: 20px;
+  }
+  
+  #navbar ul.horizontal li.facebook-link a:hover {
+    background: none;
+  }
