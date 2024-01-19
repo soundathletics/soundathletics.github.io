@@ -5,8 +5,12 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-html {
-  font-family: sans-serif;
+
+ @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100;0,200;0,400;0,800;1,100;1,200&display=swap');
+ 
+ html {
+  font-family: font-family: 'Libre Franklin', sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -451,12 +455,12 @@ th {
    -----------------------------------------------------------------------------*/
 body {
   color: #222222;
-  font-family: "Noto Serif", serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 400;
   transition: all 0.3s ease; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Lalezar', system-ui;
   font-weight: 300; }
 
 a {
@@ -493,10 +497,11 @@ hr {
 
 .content {
   width: 80%;
-  background-image: url(/img/sabackground.png);
+  /* background-image: url(/img/sabackground.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 310px 310px;
+  */
   margin-left: 5% }
 
 .site-header {
@@ -561,7 +566,7 @@ hr {
 .post-template h4,
 .post-template h5,
 .post-template h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 700; }
 
 .post {
@@ -575,7 +580,7 @@ hr {
 
 .post-info {
   color: #a2a2a2;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   font-size: 18px;
   margin-bottom: 40px;
@@ -587,7 +592,7 @@ hr {
 
 .share-buttons li {
   display: inline;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   font-size: 13px;
   color: #979797;
@@ -606,7 +611,7 @@ hr {
   display: inline-block; }
 
 .tag-title {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   border-bottom: 1px solid #ececec;
   margin-bottom: 40px; }
@@ -637,7 +642,7 @@ hr {
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   line-height: 35px;
   font-size: 13px;
@@ -657,6 +662,12 @@ hr {
     border-color: #2a373d;
     color: #FFF; }
 
+
+.fb-header {
+  width: 35px;
+  height: 35px;
+}
+
 .home {
   width: 140px; }
 
@@ -674,12 +685,12 @@ hr {
   text-align: center;
   line-height: 35px;
   font-size: 13px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   color: #979797; }
 
 .author {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300; }
 
 .author p {
@@ -712,7 +723,7 @@ hr {
 .main-footer {
   background-color: #f3f3f3;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   color: #a2a2a2; }
 
@@ -795,12 +806,34 @@ body.post-template .site-header h2 .logo {
 .clearfix:after {
   clear: both; }
 
+#navbar {
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #d13445;
+}
+  
+#navbar ul.horizontal li a {
+  font-family: 'Lalezar', system-ui;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+#logo-home img {
+  height: 80px;
+  width: 80px;
+}
+
 ul.horizontal {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #d13445;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul.horizontal li {
@@ -824,7 +857,7 @@ ul.horizontal li a.active {
 }
 
 .watermark {
-  background-image: url(./../img/logo.png);
+  /* background-image: url(./../img/logo.png); */
   background-repeat: no-repeat;
   color: black;
   opacity:.5;

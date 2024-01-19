@@ -33,12 +33,17 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="site-header">
+        <!-- <header class="site-header">
             <div class="transparent-layer">
                 <h2 style="font-family: Impact">{{ .Site.Params.header_title }}</h2>
             </div>
-        </header>
+        </header> -->
         <div id="navbar">
+            <div id="logo-home">
+                <a href="/">
+                    <img src="/img/logo_home.png">
+                </a>
+            </div>
             <ul class="horizontal">
             {{ if isset .Site.Params "main_menu" }}
                 {{ $url := .Permalink }}
@@ -49,6 +54,9 @@
                     <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
                 {{ end }}
             {{ end }}
+                <li class="facebook-link"><a href="https://www.facebook.com/SoundAthletics" target="_blank">
+                    <img src="/img/fb_logo.png" class="fb-header">
+                </a></li>
             </ul>
         </div>
                 
