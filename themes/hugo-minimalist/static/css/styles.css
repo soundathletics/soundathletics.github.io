@@ -497,10 +497,11 @@ hr {
 
 .content {
   width: 80%;
-  background-image: url(/img/sabackground.png);
+  /* background-image: url(/img/sabackground.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 310px 310px;
+  */
   margin-left: 5% }
 
 .site-header {
@@ -661,6 +662,12 @@ hr {
     border-color: #2a373d;
     color: #FFF; }
 
+
+.fb-header {
+  width: 35px;
+  height: 35px;
+}
+
 .home {
   width: 140px; }
 
@@ -811,6 +818,12 @@ body.post-template .site-header h2 .logo {
   font-family: 'Lalezar', system-ui;
   text-transform: uppercase;
   font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+#logo-home img {
+  height: 80px;
+  width: 80px;
 }
 
 ul.horizontal {
@@ -818,8 +831,9 @@ ul.horizontal {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /* display: flex;
-    justify-content: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul.horizontal li {
@@ -843,7 +857,7 @@ ul.horizontal li a.active {
 }
 
 .watermark {
-  background-image: url(./../img/logo.png);
+  /* background-image: url(./../img/logo.png); */
   background-repeat: no-repeat;
   color: black;
   opacity:.5;

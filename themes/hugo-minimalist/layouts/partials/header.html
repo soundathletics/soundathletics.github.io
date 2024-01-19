@@ -40,7 +40,9 @@
         </header> -->
         <div id="navbar">
             <div id="logo-home">
-                <a href="/">HOME</a>
+                <a href="/">
+                    <img src="/img/logo_home.png">
+                </a>
             </div>
             <ul class="horizontal">
             {{ if isset .Site.Params "main_menu" }}
@@ -52,7 +54,9 @@
                     <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
                 {{ end }}
             {{ end }}
-                <li><a href="facebook.com">FB</a></li>
+                <li class="facebook-link"><a href="https://www.facebook.com/SoundAthletics" target="_blank">
+                    <img src="/img/fb_logo.png" class="fb-header">
+                </a></li>
             </ul>
         </div>
                 
