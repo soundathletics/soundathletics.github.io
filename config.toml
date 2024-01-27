@@ -18,6 +18,7 @@ theme = "hugo-minimalist"
     header_title = "Sound Athletics"
     copyright = "Powered by [Hugo](http://gohugo.io)."
     main_menu = ["calendar", "athlete signup", "donate", "contact us"]
+    footer_menu = ["calendar", "athlete signup", "volunteer today", "coaching opportunities", "contact us"]
 
     # Enable gogle analytics by entering your tracking code
     google_analytics = ""

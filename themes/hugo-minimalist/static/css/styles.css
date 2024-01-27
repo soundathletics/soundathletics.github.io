@@ -79,14 +79,17 @@ template {
  * Remove the gray background color from active links in IE 10.
  */
 a {
-  background: transparent; }
+  background: transparent; 
+  color: #cf263d;
+  font-weight: bold;}
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
 a:active,
 a:hover {
-  outline: 0; }
+  outline: 0; 
+  text-decoration: underline;}
 
 /* Text-level semantics
 ========================================================================== */
@@ -145,6 +148,11 @@ sup {
 
 sub {
   bottom: -0.25em; }
+
+hr {
+  background-color: rgba(0,0,0,0);
+  border-top: solid 1px #CF263D;
+}
 
 /* Embedded content
 ========================================================================== */
@@ -475,11 +483,6 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: #a2a2a2; }
 
-hr {
-  border: 0;
-  border-top: 1px #E4E4E4 solid;
-  margin: 40px 0; }
-
 .post ul li {
   line-height: 28px;
   font-size: 15px; }
@@ -496,13 +499,83 @@ hr {
   margin: 20px 5% 0px 5%; }
 
 .content {
-  width: 80%;
   /* background-image: url(/img/sabackground.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 310px 310px;
   */
   margin-left: 5% }
+
+.content.home {
+  margin: 0 auto;
+}
+
+.content.home .home-left-column {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.intro-text {
+  margin-top: 0;
+}
+
+.intro-text h1 {
+  margin-top: 0;
+}
+
+.content.home .home-right-column {
+  width: 40%;
+  padding-left: 20px;
+}
+
+.athlete-signup,
+.what-sports {
+  padding: 1em;
+}
+
+.athlete-signup {
+  background-color: #DBEBD8;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.athlete-signup h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.athlete-signup h2 {
+  font-weight: 100;
+  margin: 0 0;
+}
+
+.home-volunteer {
+  background-color: #DBEBD8;
+  width: 100%;
+  margin:auto 0;
+  text-align: center;
+}
+
+.what-sports {
+  background-color: #A1C0EF;
+  border-radius: 10px;
+}
+
+.what-sports h1 {
+  margin-top: 0;
+}
+
+.content.home .main-content {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content.home .home-volunteer,
+.content.home .home-donate {
+  text-align: center;
+}
+
 
 .site-header {
   background: #2a373d url(../img/header-bg.jpg) no-repeat center center;
@@ -669,7 +742,7 @@ hr {
 }
 
 .home {
-  width: 140px; }
+  //width: 140px; }
 
 .newer {
   position: absolute;
@@ -721,14 +794,16 @@ hr {
   font-size: 20px; }
 
 .main-footer {
-  background-color: #f3f3f3;
+  /* background-color: #f3f3f3; */
   text-align: center;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 300;
   color: #a2a2a2; 
-  position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 95%;
+  border-top: 1px solid #d13445;
+  margin: 0 auto;
+  margin-top: 2em;
 }
 
 .main-footer .container {
@@ -829,6 +904,31 @@ body.post-template .site-header h2 .logo {
 #logo-home img {
   height: 80px;
   width: 80px;
+}
+
+#footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+#footer-nav ul.horizontal li a {
+  font-family: 'Libre Franklin', sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+  color: #000;
+  border-radius: 10px;
+  padding: 10px 12px;
+  text-transform: none;
+}
+
+#footer-nav ul.horizontal li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.footer-logos .sa {
+  width: 100px;
 }
 
 ul.horizontal {

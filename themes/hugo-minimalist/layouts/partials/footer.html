@@ -1,6 +1,24 @@
 <footer class="main-footer">
+
   <div class="container clearfix">
-        <img src="/img/sowashington.png"/>
+
+  <div id="footer-nav">
+    <ul class="horizontal">
+      {{ if isset .Site.Params "footer_menu" }}
+      {{ $url := .Permalink }}
+      {{ range $item := .Site.Params.footer_menu }}
+          {{ $itemUrl := printf "%s/%s/" $item }}
+          {{ $itemTitle := title $item }}
+          {{ $itemHref := replace $item " " "_"}}
+          <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
+      {{ end }}
+    {{ end }}
+  </ul>
+</div>
+    <div class="footer-logos">
+      <img src="/img/logo_home.png" class="sa">
+      <img src="/img/sowashington.png" class="sow"/>
+     </div>
   </div>
 </footer>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
