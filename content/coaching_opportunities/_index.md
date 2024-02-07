@@ -4,6 +4,7 @@ draft = false
 title = "Coaching Opportunities" #_
 
 +++
+# Coaching Oppotunities
 
 Sound Athletics is looking for energetic people to coach and train our athletes at practices and competitions.
 No experience is required; training is provided by Special Olympics Washington.
