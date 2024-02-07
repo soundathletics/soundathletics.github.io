@@ -471,11 +471,21 @@ body {
   color: #222222;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: 400;
+  line-height: 1.4em;
   transition: all 0.3s ease; }
+
+p {
+  line-height: 1.4em;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Lalezar', system-ui;
   font-weight: 300; }
+
+h1.page-title {
+    font-size: 3em;
+  }
+  
 
 a {
   text-decoration: none;
@@ -488,6 +498,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   color: #222222; }
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
     color: #a2a2a2; }
+
+.button {
+  font-weight: bold;
+}
 
 .post ul li {
   line-height: 28px;
@@ -558,7 +572,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .home-volunteer {
   background-color: #DBEBD8;
   width: 100%;
-  margin:1em 0;
+  margin: 1em 0;
   text-align: center;
 }
 
@@ -573,11 +587,14 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .sport-season {
   display: flex;
-  justify-content: space-around;
 }
 
-.sport-season div {
-  width: 33%;
+.sport-season div:nth-child(1) {
+  width: 65px;
+}
+
+.sport-season div:nth-child(2) {
+  width: 25px;
 }
 
 .content.home .main-content {
