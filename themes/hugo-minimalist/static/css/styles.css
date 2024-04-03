@@ -91,6 +91,18 @@ a:hover {
   outline: 0; 
   text-decoration: underline;}
 
+/**
+ * button class for links
+ */
+
+ a.button {
+  background-color: #cf263d;
+  color: white !important;
+  padding: .6em 1em;
+  border-radius: 20px;
+ }
+
+
 /* Text-level semantics
 ========================================================================== */
 /**
@@ -117,7 +129,7 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /**
@@ -479,17 +491,17 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lalezar', system-ui;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300; }
 
 h1.page-title {
     font-size: 3em;
+    margin-bottom: 0;
   }
   
-
 a {
   text-decoration: none;
-  color: red;
+  color: #cf263d;
   transition: all 0.3s ease; }
   a:hover {
     color: brown; }
@@ -510,7 +522,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .container {
   margin: 0 auto;
   width: 1200px;
-  padding: 50px 0 0 0; }
+  padding: 1em 0 0 0; }
 
 .author {
   text-align: center;
@@ -927,7 +939,7 @@ body.post-template .site-header h2 .logo {
 }
   
 #navbar ul.horizontal li a {
-  font-family: 'Lalezar', system-ui;
+  font-family: 'Libre Franklin', 'sans-serif';
   text-transform: uppercase;
   font-size: 1.3em;
   letter-spacing: 1px;
@@ -1014,9 +1026,112 @@ ul.horizontal li a.active {
     background: none;
   }
 
+  /***************************************
+  Styling for Responsive Navigation
+  **************************************/
+
+  .main-navigation {
+    display: block;
+    width: 100%;
+  }
+  
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+  }
+  
+  .main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+  }
+  
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    display: block;
+    left: auto;
+  }
+  
+  .main-navigation ul ul a {
+    width: 200px;
+  }
+  
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    left: auto;
+  }
+  
+  .main-navigation li {
+    position: relative;
+  }
+  
+  .main-navigation a {
+    display: block;
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    #navbar {
+      padding-left: 1em;
+      padding-right: .3em;
+      justify-content: space-between;
+    }
+    
+    .navigation-wrapper {
+ 
+    }
+  }
+
+  
+  /********************************************
+  Mobile Menu 
+  ********************************************/
+  .menu-toggle,
+  .main-navigation.toggled ul {
+    display: block;
+    position: relative;
+    top: .2em;
+    right: .2em;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    border-radius: .2em;
+    padding: .4em;
+  }
+
+  .menu-toggle .site-icon {
+    font-size: 2em;
+    color: #fff;
+    fill: #fff;
+  }
+
+
+  
+  @media screen and (min-width: 769px) {
+  
+    .menu-toggle {
+      display: none;
+    }
+  
+    .main-navigation ul {
+      display: flex;
+    }
+  }
 
   /***************************************
-  Fontello Test
+  Fontello Icon font
   **************************************/
 
   @charset "UTF-8";
