@@ -1105,17 +1105,29 @@ ul.horizontal li a.active {
   }
 
 /**************************************
-Topnav Responsive - Medium
+Responsive - Medium
 **************************************/
+
+/* Mobile Menu */
 
 @media only screen and (min-width: 769px) and (max-width: 1040px) {
   #navbar ul.horizontal li a {
     font-size: 1em;
   }
+
+  /* Page Layout Container */
+  .content.home .main-content {
+    width: 90%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
 }
 
 /**************************************
-Mobile Menu Responsive
+Responsive - Mobile
 **************************************/
   
 @media screen and (min-width: 769px) {
@@ -1155,6 +1167,28 @@ Mobile Menu Responsive
     border-radius: 0;
     text-align: left;
   }
+
+  /* Page Layout Container */
+  .content.home .main-content {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .content.home [class^='home-'] {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  #footer-nav {
+    display: none;
+  }
+
+
 }
 
   /***************************************
