@@ -1079,19 +1079,6 @@ ul.horizontal li a.active {
     display: block;
     text-decoration: none;
   }
-
-  @media screen and (max-width: 768px) {
-    #navbar {
-      padding-left: 1em;
-      padding-right: .3em;
-      justify-content: space-between;
-    }
-    
-    .navigation-wrapper {
- 
-    }
-  }
-
   
   /********************************************
   Mobile Menu 
@@ -1117,18 +1104,58 @@ ul.horizontal li a.active {
     fill: #fff;
   }
 
+/**************************************
+Topnav Responsive - Medium
+**************************************/
 
-  
-  @media screen and (min-width: 769px) {
-  
-    .menu-toggle {
-      display: none;
-    }
-  
-    .main-navigation ul {
-      display: flex;
-    }
+@media only screen and (min-width: 769px) and (max-width: 1040px) {
+  #navbar ul.horizontal li a {
+    font-size: 1em;
   }
+}
+
+/**************************************
+Mobile Menu Responsive
+**************************************/
+  
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding-left: 1em;
+    padding-right: .3em;
+    justify-content: space-between;
+  }
+  
+  .main-navigation.toggled ul {
+    display: block;
+    position: absolute;
+    top: 6em;
+    right: 0;
+    background-color: #d13445;
+  }
+
+  .main-navigation.toggled ul.horizontal li {
+    float: none;
+  }
+
+  #navbar ul.horizontal li a:hover,
+  #navbar ul.horizontal li a:visited,
+  #navbar ul.horizontal li a:focus,
+  #navbar ul.horizontal li a:hover:not(.active) {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+  }
+}
 
   /***************************************
   Fontello Icon font
