@@ -546,12 +546,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   margin: 0 auto;
   width: 100%;
   margin: 0 auto;
-  
+  max-width: none;
 }
 
 .content.home .home-left-column {
   width: 60%;
   padding-right: 20px;
+}
+
+p {
+  max-width: 800px;
 }
 
 .intro-text {
@@ -1029,15 +1033,23 @@ ul.horizontal li a.active {
   border-radius: 20px;
   }
   
-  #navbar ul.horizontal li.facebook-link a:hover {
-    background: none;
-  }
+#navbar ul.horizontal li.facebook-link a:hover {
+  background: none;
+}
 
-  .calendar {
-    width: 90%;
-    height: 100%;
-    min-height: 600px;
-  }
+.calendar {
+  width: 90%;
+  height: 100%;
+  min-height: 600px;
+}
+
+.content.home [class^='home-'] {
+  padding: 1em 0;
+}
+
+.full-width p {
+  margin: 0 auto;
+}
 
   /***************************************
   Styling for Responsive Navigation
