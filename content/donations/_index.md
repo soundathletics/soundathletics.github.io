@@ -6,7 +6,13 @@ title = "Donations" #_
 
 # Support Sound Athletics
 
-Your generous donations are always welcome.<br/>
+<style>
+    p {max-width: none;}
+</style>
+
+<div style="margin: 0 auto; text-align: center">
+Your generous donations are always welcome.
+
 You can donate with PayPal
 
 
@@ -24,3 +30,5 @@ Or send donations directly to:<br>
 **Sound Athletics**<br/>
 **3801 N 27th Street #6921**<br/>
 **Tacoma, WA 98407-9998**
+
+</div>
