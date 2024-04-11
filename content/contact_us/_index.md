@@ -5,9 +5,9 @@ title = "Contact Us" #_
 
 +++
 
-## Sound Athletics Team
+# Sound Athletics Team
 
-. | .
+ | 
 ---- | ----
 Sherry Bowman: | **President and Founder**
 Ann Brownlee: | **Team Manager**

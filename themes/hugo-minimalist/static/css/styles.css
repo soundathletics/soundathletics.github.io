@@ -91,6 +91,18 @@ a:hover {
   outline: 0; 
   text-decoration: underline;}
 
+/**
+ * button class for links
+ */
+
+ a.button {
+  background-color: #cf263d;
+  color: white !important;
+  padding: .6em 1em;
+  border-radius: 20px;
+ }
+
+
 /* Text-level semantics
 ========================================================================== */
 /**
@@ -117,7 +129,7 @@ dfn {
  * contexts in Firefox 4+, Safari, and Chrome.
  */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0; }
 
 /**
@@ -479,17 +491,17 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lalezar', system-ui;
+  font-family: 'Libre Franklin', sans-serif;
   font-weight: 300; }
 
 h1.page-title {
     font-size: 3em;
+    margin-bottom: 0;
   }
   
-
 a {
   text-decoration: none;
-  color: red;
+  color: #cf263d;
   transition: all 0.3s ease; }
   a:hover {
     color: brown; }
@@ -510,7 +522,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 .container {
   margin: 0 auto;
   width: 1200px;
-  padding: 50px 0 0 0; }
+  padding: 1em 0 0 0; }
 
 .author {
   text-align: center;
@@ -524,15 +536,26 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   background-position: center;
   background-size: 310px 310px;
   */
-  margin-left: 5% }
+  width: 90%;
+  max-width: 1210px;
+  margin: 0 auto;
+
+}
 
 .content.home {
   margin: 0 auto;
+  width: 100%;
+  margin: 0 auto;
+  max-width: none;
 }
 
 .content.home .home-left-column {
   width: 60%;
   padding-right: 20px;
+}
+
+p {
+  max-width: 800px;
 }
 
 .intro-text {
@@ -583,6 +606,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 
 .what-sports h1 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .sport-season {
@@ -927,7 +951,7 @@ body.post-template .site-header h2 .logo {
 }
   
 #navbar ul.horizontal li a {
-  font-family: 'Lalezar', system-ui;
+  font-family: 'Libre Franklin', 'sans-serif';
   text-transform: uppercase;
   font-size: 1.3em;
   letter-spacing: 1px;
@@ -1010,13 +1034,198 @@ ul.horizontal li a.active {
   border-radius: 20px;
   }
   
-  #navbar ul.horizontal li.facebook-link a:hover {
-    background: none;
-  }
+#navbar ul.horizontal li.facebook-link a:hover {
+  background: none;
+}
 
+.calendar {
+  width: 90%;
+  height: 100%;
+  min-height: 600px;
+}
+
+.content.home [class^='home-'] {
+  padding: 1em 0;
+}
+
+.full-width p {
+  margin: 0 auto;
+}
+
+.home article h1 {
+  margin-bottom: 0;
+}
 
   /***************************************
-  Fontello Test
+  Styling for Responsive Navigation
+  **************************************/
+
+  .main-navigation {
+    display: block;
+    width: 100%;
+  }
+  
+  .main-navigation ul {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+  }
+  
+  .main-navigation ul ul ul {
+    left: -999em;
+    top: 0;
+  }
+  
+  .main-navigation ul ul li:hover > ul,
+  .main-navigation ul ul li.focus > ul {
+    display: block;
+    left: auto;
+  }
+  
+  .main-navigation ul ul a {
+    width: 200px;
+  }
+  
+  .main-navigation ul li:hover > ul,
+  .main-navigation ul li.focus > ul {
+    left: auto;
+  }
+  
+  .main-navigation li {
+    position: relative;
+  }
+  
+  .main-navigation a {
+    display: block;
+    text-decoration: none;
+  }
+  
+  /********************************************
+  Mobile Menu 
+  ********************************************/
+  .menu-toggle,
+  .main-navigation.toggled ul {
+    display: block;
+    position: relative;
+    top: .2em;
+    right: .2em;
+  }
+
+  .menu-toggle {
+    background: none;
+    border: none;
+    border-radius: .2em;
+    padding: .4em;
+  }
+
+  .menu-toggle .site-icon {
+    font-size: 2em;
+    color: #fff;
+    fill: #fff;
+  }
+
+/**************************************
+Responsive - Medium
+**************************************/
+
+/* Mobile Menu */
+
+@media only screen and (min-width: 769px) and (max-width: 1040px) {
+  #navbar ul.horizontal li a {
+    font-size: 1em;
+  }
+
+  /* Page Layout Container */
+  .content.home .main-content {
+    width: 90%;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+/**************************************
+Responsive - Mobile
+**************************************/
+  
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #navbar {
+    padding-left: 1em;
+    padding-right: .3em;
+    justify-content: space-between;
+  }
+  
+  .main-navigation.toggled ul {
+    display: block;
+    position: absolute;
+    top: 6em;
+    right: 0;
+    background-color: #d13445;
+  }
+
+  .main-navigation.toggled ul.horizontal li {
+    float: none;
+  }
+
+  #navbar ul.horizontal li a:hover,
+  #navbar ul.horizontal li a:visited,
+  #navbar ul.horizontal li a:focus,
+  #navbar ul.horizontal li a:hover:not(.active) {
+    width: 100%;
+    border-radius: 0;
+    text-align: left;
+  }
+
+  /* Page Layout Container */
+  .content.home .main-content {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .content.home [class^='home-'] {
+    width: 100%;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  #footer-nav {
+    display: none;
+  }
+
+  .calendar {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+}
+
+  /***************************************
+  Fontello Icon font
   **************************************/
 
   @charset "UTF-8";
