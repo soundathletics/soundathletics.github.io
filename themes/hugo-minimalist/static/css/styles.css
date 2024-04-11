@@ -606,6 +606,7 @@ p {
 
 .what-sports h1 {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 .sport-season {
@@ -1049,6 +1050,10 @@ ul.horizontal li a.active {
 
 .full-width p {
   margin: 0 auto;
+}
+
+.home article h1 {
+  margin-bottom: 0;
 }
 
   /***************************************
