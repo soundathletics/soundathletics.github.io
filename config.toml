@@ -1,4 +1,4 @@
-baseurl = "http://soundathletics.org/"
+baseurl = "https://soundathletics.org/"
 languageCode = "en-us"
 title = "Sound Athletics"
 # Define how many pages appear per site
