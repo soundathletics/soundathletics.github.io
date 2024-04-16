@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js">
     <head>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{ if .IsNode}}{{ .Title }} &middot; {{end}}{{ .Site.Title }}</title>
@@ -11,10 +12,11 @@
           <link href="{{ .Site.BaseURL }}post/index.xml" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
         <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700|Noto+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/styles.css">
-        <link rel="icon" href="{{ .Site.BaseURL }}favicon.ico">
-        <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" />
+        <link rel=”shortcut icon” type=”image/jpg” href=”/img/favicon.ico”/>
+        <!-- <link rel="apple-touch-icon" href="{{ .Site.BaseURL }}apple-touch-icon.png" /> -->
         <link rel="stylesheet" href="{{ .Site.BaseURL }}css/highlightjs/monokai.css">
         <script src="{{ .Site.BaseURL }}js/vendor/modernizr-2.8.0.min.js"></script>
+        <script src="{{ .Site.BaseURL }}js/navigation.js" defer></script>
         <style>
         .site-header h2 .logo {
         background: url({{ .Site.BaseURL }}{{ .Site.Params.header_background }}) no-repeat 0 0;
@@ -33,22 +35,35 @@
         <!--[if lt IE 8]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="site-header">
+        <!-- <header class="site-header">
             <div class="transparent-layer">
                 <h2 style="font-family: Impact">{{ .Site.Params.header_title }}</h2>
             </div>
-        </header>
+        </header> -->
         <div id="navbar">
-            <ul class="horizontal">
-            {{ if isset .Site.Params "main_menu" }}
-                {{ $url := .Permalink }}
-                {{ range $item := .Site.Params.main_menu }}
-                    {{ $itemUrl := printf "%s/%s/" $item }}
-                    {{ $itemTitle := title $item }}
-                    {{ $itemHref := replace $item " " "_"}}
-                    <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
-                {{ end }}
-            {{ end }}
-            </ul>
+            <div id="logo-home">
+                <a href="/">
+                    <img src="/img/logo_home.png">
+                </a>
+            </div>
+            <div class="navigation-wrapper"> 
+                <nav id="site-navigation" class="main-navigation">
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="site-icon"><svg viewBox="0 0 512 512" aria-hidden="true" width="1em" height="1em"><path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z"></path></svg></span></button>
+    
+                    <ul class="horizontal main-menu">
+                    {{ if isset .Site.Params "main_menu" }}
+                        {{ $url := .Permalink }}
+                        {{ range $item := .Site.Params.main_menu }}
+                            {{ $itemUrl := printf "%s/%s/" $item }}
+                            {{ $itemTitle := title $item }}
+                            {{ $itemHref := replace $item " " "_"}}
+                            <li {{ if eq $url $itemUrl }}class="active"{{ end }}><a class="navbar-txt" href="/{{ $itemHref }}">{{ $itemTitle }}</a></li>
+                        {{ end }}
+                    {{ end }}
+                        <li class="facebook-link"><a href="https://www.facebook.com/SoundAthletics" target="_blank">
+                            <img src="/img/fb_logo.png" class="fb-header">
+                        </a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-                
